@@ -15,8 +15,8 @@ class Config:
         self.test_ratio = 0.3
 
         # 传播模型参数扫描范围
-        self.lambdas = np.linspace(0.001, 0.2,2)  # 感染强度λ
-        self.thetas = [0.5,0.75]  # 非线性程度θ
+        self.lambdas = np.linspace(0.001, 0.1,2)  # 感染强度λ
+        self.thetas = [0.5,1.0]  # 非线性程度θ
 
         # 算法比较列表
         self.algorithms = ['DR-UGCN', 'HDC', 'SC', 'DC', 'BC']
