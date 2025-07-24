@@ -50,7 +50,7 @@ def run_nonlinear_experiment(cfg, hg, device):
 
         # 处理DR-UGCN
         drugcn_trainer.train(epochs=100, lr=0.01)
-        X, _, adj = prepare_data(hg, lambdas=0.005, thetas=0.75)
+        X, _, adj = prepare_data(hg, lambda_=0.005, theta=0.75)
         with torch.no_grad():
             pred = drugcn_model(X, adj)
         results['DR-UGCN'].append((pred > 0.5).float().mean().item())
